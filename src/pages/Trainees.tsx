@@ -148,7 +148,7 @@ const Trainees: React.FC = () => {
                   <SelectValue placeholder="Filter by trade" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Trades</SelectItem>
+                  <SelectItem value="all">All Trades</SelectItem>
                   {trades.map((trade) => (
                     <SelectItem key={trade.tradeId} value={trade.tradeId.toString()}>
                       {trade.tradeName}

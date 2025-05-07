@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useData } from '@/contexts/DataContext';
 import { Button } from '@/components/ui/button';
@@ -226,7 +225,7 @@ const Marks: React.FC = () => {
                   <SelectValue placeholder="Filter by trade" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Trades</SelectItem>
+                  <SelectItem value="all">All Trades</SelectItem>
                   {trades.map((trade) => (
                     <SelectItem key={trade.tradeId} value={trade.tradeId.toString()}>
                       {trade.tradeName}
@@ -244,7 +243,7 @@ const Marks: React.FC = () => {
                   <SelectValue placeholder="Filter by module" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Modules</SelectItem>
+                  <SelectItem value="all">All Modules</SelectItem>
                   {modules.map((module) => (
                     <SelectItem key={module.moduleId} value={module.moduleId.toString()}>
                       {module.modName}
